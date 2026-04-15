@@ -73,7 +73,7 @@ Le formulaire de contact utilise [Formspree](https://formspree.io/) :
 
 - [ ] Remplacer toutes les images placeholders par les photos réelles
 - [ ] Configurer l'ID Formspree dans `contact.html`
-- [ ] Remplacer l'email placeholder `contact@christophegeloni.com` dans `contact.html`
+- [x] ~~Remplacer l'email placeholder~~ → christophe.geloni@gmail.com + tél +33 6 77 59 79 60
 - [ ] Ajouter l'URL Instagram réelle dans le footer (toutes les pages)
 - [ ] Mettre à jour l'URL du site dans les balises Schema.org
 
