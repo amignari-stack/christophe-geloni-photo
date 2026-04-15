@@ -1463,6 +1463,19 @@ p {
   margin-top: var(--space-xs);
 }
 
+/* Validation errors */
+.form-group--error input,
+.form-group--error select,
+.form-group--error textarea {
+  border-color: #d94040;
+}
+
+.form-error {
+  font-size: 0.78rem;
+  color: #d94040;
+  margin-top: 0.2rem;
+}
+
 @media (min-width: 768px) {
   .form-row {
     grid-template-columns: 1fr 1fr;
