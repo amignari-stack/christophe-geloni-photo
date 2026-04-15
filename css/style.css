@@ -870,6 +870,7 @@ p {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 8px;
+  justify-content: center;
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 0 var(--space-md);
@@ -881,6 +882,8 @@ p {
   border-radius: 3px;
   cursor: pointer;
   background-color: #2a2a2a;
+  max-width: 400px;
+  width: 100%;
   transition: opacity var(--transition-base), transform var(--transition-base);
 }
 
