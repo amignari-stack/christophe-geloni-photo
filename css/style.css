@@ -488,21 +488,6 @@ p {
   background-repeat: no-repeat;
 }
 
-/* Label placeholder pour les images manquantes */
-.hero__bg::after {
-  content: attr(data-placeholder);
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-body);
-  font-size: 0.85rem;
-  color: var(--color-text-muted);
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  opacity: 0.4;
-}
 
 /* Overlay gradient bas → haut */
 .hero__overlay {
@@ -692,21 +677,6 @@ p {
   transition: transform var(--transition-slow);
 }
 
-/* Label placeholder */
-.vignette__img::after {
-  content: attr(data-placeholder);
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-body);
-  font-size: 0.8rem;
-  color: var(--color-text-muted);
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  opacity: 0.35;
-}
 
 .vignette__overlay {
   position: absolute;
@@ -894,14 +864,15 @@ p {
 }
 
 /* ============================================
-   PORTFOLIO — GALERIE MASONRY
+   PORTFOLIO — GALERIE
    ============================================ */
 .gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 0 var(--space-md);
-  columns: 1;
-  column-gap: 12px;
 }
 
 .gallery__item {
@@ -910,28 +881,27 @@ p {
   border-radius: 3px;
   cursor: pointer;
   background-color: #2a2a2a;
-  margin-bottom: 12px;
-  break-inside: avoid;
   transition: opacity var(--transition-base), transform var(--transition-base);
 }
 
 .gallery__item img {
   display: block;
   width: 100%;
-  height: auto;
+  height: 280px;
+  object-fit: cover;
   transition: transform var(--transition-slow);
 }
 
-@media (min-width: 576px) {
-  .gallery {
-    columns: 2;
-  }
+@media (max-width: 1024px) {
+  .gallery { grid-template-columns: repeat(3, 1fr); }
 }
 
-@media (min-width: 1024px) {
-  .gallery {
-    columns: 3;
-  }
+@media (max-width: 768px) {
+  .gallery { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 480px) {
+  .gallery { grid-template-columns: 1fr; }
 }
 
 .gallery__item-overlay {
@@ -1102,19 +1072,6 @@ p {
   overflow: hidden;
 }
 
-.univers-card__image::after {
-  content: attr(data-placeholder);
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.8rem;
-  color: var(--color-text-muted);
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  opacity: 0.35;
-}
 
 .univers-card__body {
   padding: var(--space-sm) var(--space-md) var(--space-md);
@@ -1210,19 +1167,6 @@ p {
   overflow: hidden;
 }
 
-.about-bio__portrait::after {
-  content: attr(data-placeholder);
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.8rem;
-  color: var(--color-text-muted);
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  opacity: 0.35;
-}
 
 .about-bio__content {
   display: flex;
